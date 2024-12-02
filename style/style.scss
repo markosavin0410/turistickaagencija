@@ -1,0 +1,27 @@
+@import './variables';
+@import './heroSection';
+@import './header';
+@import './footer';
+@import './main';
+@import './contact';
+@import './recommended';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+.okvir{
+    border: 2px solid black;
+    height: 170px;
+  
+}
+a{
+    text-decoration: none !important;
+}
+.button{
+    border: none;
+    font-weight: 700;
+    padding: 4px;
+
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turisticka agencija - Savin</title>
+    <meta name="description" content="Turisticka agencija najpovoljnija putovanja Evropa, svet">
+    <link rel="icon" type="image/x-icon" href="img/logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat&display=swap" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <a href="#slider"><div id="scrollUp"><i class="fa fa-arrow-up"></i></div></a>
+    <div id="upperNav" class="d-md-flex d-none">
+      <div class="container d-flex justify-content-between">
+        <section class="text-center mb-5">
+          <a href="https://www.facebook.com" class="text-white me-4" target="_blank">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com" class="text-white me-4" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="https://www.whatsapp.com" class="text-white" target="_blank">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          </a>
+          
+        </section>
+          <div>+381 555333 <i class="fa fa-phone"></i></div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light sticky-top p-1" id="nav">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><div id="okvirlogo"><img src="img/logo.png" alt="logo"></div></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">  <!-- ovde dodati idnamicki navbar-->
+            
+          </div> 
+        </div>
+        
+      </nav>
+      <div id="slider">
+        <div id="slider-img">  <!-- ovde dodati idnamicki slike slajdera-->
+          <section class="text-center text-sm-start p-sm-0 p-1">
+            <div id="title"><h1>Putujte sa nama,<br>stvarajte uspomene!</h1></div>
+          <a href="#recommended"><div id="button"><input type="button" class="button buttonHero" value="Saznaj više" id="buttonHero"></div></a>
+          </section>
+          
+        </div>
+      </div>
+      <div id="onama" class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 p-5">
+              <h3>O nama</h3>
+              <p>Naša agencija već 10 godina pruža ljubiteljima putovanja da 
+                obiđu najpozantije svetske destinacije kao i nezaboravna letovanja na najegzotičnijim odmaralištima širom planete.<br>
+                Obećavamo vam pouzdan put, lep provod i nezaboravno iskustvo!
+              </p>
+              <a href="#kontakt"><input type="button" value="Kontakt" class="button buttonContact" id="aboutDugme"></a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 about text-center mt-sm-0 mt-5 afterCouner"><h3 id="zadovoljniBroj"></h3><p class="aboutCounterText">zadovoljnih mušterija</p></div>
+          <div class="col-12 col-sm-6 col-md-3 about text-center mt-sm-0 mt-5"><h3 id="putovanjaBroj"></h3><p class="aboutCounterText">organizovanih putovanja</p></div>
+        </div>
+      </div>
+      <div class="container-fluid bg-siteColor-white mt-sm-0 mt-5">
+        <div class="text-center text-white pt-3">
+          <h2 class="title-white">Naše preporuke</h2><hr class="hr-white">
+          <p class="text-white-50 mt-2 fst-italic">Pogledajte ponude koje imamo za ovu godinu po najnižim cenama!</p>
+        </div>
+        <div class="container" id="recommended"> 
+            <!-- ovde dodati idnamicki kartice-->
+
+        </div>
+      </div>
+      <div class="container-fluid mb-5 p-4 bgSlika">
+        <div id="reservation">
+            <div class="row">
+                <div class="col-12 col-sm-6 p-4">
+                  <div>
+                    <label for="reservarionEmail">Unesi email adresu:*</label>
+                    <input type="email" placeholder=" youremail@gmail.com" id="reservationEmail">
+                    <span class="greska"></span>
+                  </div>
+                 
+                  <div>
+                    <label for="reservationDate">Izaberite datum polaska: </label>
+                    <input type="date" id="datumPolaska">
+                    <span class="greska"></span>
+                  </div>
+                  <div>
+                    <label for="reservationDate">Izaberite datum povratka:*</label>
+                    <input type="date" id="datumPovratka">
+                    <span class="greska"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 p-4 pt-0 pt-sm-4">
+                  <div>
+                    <label for="reservationHotel"> Izaberite smestaj:*</label>
+                    <select id="selectHotel"> <!-- dinamicki dodavanje select -->
+                      
+                    </select>
+                    <span class="greska"></span>
+                  </div>
+                  <div>
+                    <label for="Osoba">Broj osoba:</label>
+                    <input type="number" value="1" min="1" max="8" id="brOsoba">
+                    <span class="greska"></span>
+                  </div>
+                  <div class="cbHeight" id="cbParent">
+                    <input type="checkbox" id="cbReservation"><label for="cbReservation">Želim da primim mail poruku o potvrdi rezervacije.*</label>
+                    
+                  </div>
+                  <span class="greska"></span>
+                </div>
+                <span class="upsesnoPopunjenaForma"></span>
+                <div class="col-12 d-flex justify-content-center mb-3">
+                  
+                  <input type="button" value="Rezervisi" id="rezBtn">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div id="newyear">
+        <div class="text-center pt-3">
+          <h2 class="title-white">Zimske ekskurzije</h2><hr class="hr-black">
+          <p class="mt-2 fst-italic">Pogledjte naše ponude i programe putovanja u najpoznatije evropske prestonice za božićne i novogodisnje praznike!</p>
+        </div>
+        <div class="container" id="zimskeEkskurzije"> <!-- ovde dodati idnamicki kartice-->
+          
+      </div>
+
+
+      </div>
+
+      <div id="questions">
+        <div class="text-center pt-3">
+          <h2 class="title-white">Najčešća pitanja</h2><hr class="hr-black">
+      </div>
+      <div id="listaPitanja" class="mt-5 p-3">
+        <ul >
+          <li><h5>Kako da rezervišem putovanje?</h5>
+          <p class="p-2">Putovanje možete rezervisati tako što popunite formu na sajtu, zatim Vam šaljemo mejl potvrde i podatke o plaćanju. Takodje možete zakazati uživo u nekim od naših lokala.</p>
+        </li>
+          <li><h5>Koji su svi mogući načini plaćanja?</h5>
+          <p class="p-2">Aranžman možete platiti u celini ili na rate (20% cene placete po prijavi 50% placate mesec dana pre putovanja i ostatak dan pre). Plaćanje se odvija u našim lokalima ili uplatom na račun.</p>
+        </li>
+        <li><h5>Da li mogu da plaćam putovanje na odloženo?</h5>
+          <p class="p-2">Plaćanje na odloženo (nakon puta) je moguće putem čekova građana ili administrativne zabrane. </p>
+        </li>
+        <li><h5>Da li u sobu za troje, može da se ubaci četvrta osoba?</h5>
+          <p class="p-2">Odgovor na ovo pitanja se razlikuje od smeštaja do smeštaja.  Naš osnovni fokus je na obezbeđivanju maksimalnog komfora i kvaliteta usluge za naše klijente, prema čemu se i donosi odluka. </p>
+        </li>
+        <li><h5> Šta ako odustanem od putovanja?</h5>
+          <p class="p-2">Vi imate pravo da odustanete od putovanja u svakom trenutku. Međutim, prilikom odustajanja nastaju određeni troškovi, koji zavise od toga koliko dana ima do početka putovanja i o kojim uslugama je reč.</p>
+        </li>
+        <li><h5> Iz kojih gradova su planirani polasci?</h5>
+          <p class="p-2">To zavisi od putovanja do putovanja. Uglavnom su organizovani polasci iz najvećih gradova u zemlji, Beograda, Novog Sada i Niša. Međutim ako postoji veća grupa ljudi iz bilo kog drugog grada, može se organizovati polazak.</p>
+        </li>
+        </ul>
+      </div>
+      </div>
+     
+      <div id="kontakt" class="container mt-5">
+       <h2 class="text-dark">Kontakt i lokacija</h2> 
+       <p class="mt-2 fst-italic">Ukoliko želite dodatne informacije ili da zakazete putovanje kontaktirajte nas preko kontakt forme ili posetite neke od naših lokala u Beogradu!</p>
+       <div class="row">
+           <div class="col-12 col-md-6 p-3">
+                <div class="p-3" id="okvirKontaktForma">
+                    <form action="#" method="get">
+                        <div class="mb-3"><input type="text" placeholder="Ime i Prezime" id="contactImePrezime"><span class="greska"></span></div>                       
+                        <div class="mb-3"><input type="email" placeholder="E-mail:" id="cMail"><span class="greska"></span></div>
+                        <div class="mb-3"><input type="text" placeholder="Telefon npr:+3811234567" id="Brojtelefona"><span class="greska"></span></div>
+                        <textarea placeholder="Postavite pitanje za vise informacija: " id="pitanje"></textarea><span class="greska"></span>
+                        <div id="submit"><input type="button" value="Posalji" id="contactBtn"></div>
+                    </form>
+                </div>
+
+              </div>
+           
+            <div class="col-12 col-md-6 p-4">
+                
+                <div class="row">
+                <div class="col-12 locationCard">
+                  <div class="row">
+                    <div class="col-12 col-sm-7 p-3">
+                        <h4><i class="fa fa-map-marker"></i> Kneza Milosa 21</h4>
+                        <p>Radno vreme:<br>pon-pet: 08:00 - 16:00 <br> subota: 08:00 - 14:00<br>nedelje: neradan dan<br>Broj telefona:  011 232134</p>       
+                        
+                    </div>
+                    <div class="col-12 col-sm-5 locationCardBg p-3">
+                      <button class="locationBtn2"><i class="fa fa-phone"></i> Pozovi</button>
+                      <button class="locationBtn"><i class="fa fa-envelope"></i> Poruka</button>
+                    </div>
+                  </div>
+
+                </div>
+                  <div class="col-12 locationCard mt-3">
+                    <div class="row">
+                      <div class="col-12 col-sm-7 p-3">
+                        <h4><i class="fa fa-map-marker"></i> Nemanjina 33</h4>
+                        <p>Radno vreme:<br>pon-pet: 09:00 - 16:00 <br> subota: 08:00 - 12:00<br>nedelje: neradan dan<br>Broj telefona:  011 234566</p>
+                       
+                      </div>
+                      <div class="col-12 col-sm-5 locationCardBg p-3">
+                        <button class="locationBtn2"><i class="fa fa-phone"></i> Pozovi</button>
+                      <button class="locationBtn"><i class="fa fa-envelope"></i> Poruka</button>
+                      </div>
+                    </div>
+                  
+                </div>
+                </div>
+            </div>
+        </div>
+           
+      </div>
+      
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1109.8551482787489!2d20.462921490906883!3d44.80994147700329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssr!2srs!4v1731088622294!5m2!1ssr!2srs" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <footer class="text-center text-white">
+        <div class="container">
+          <section>
+            <div class="row text-center d-flex justify-content-center pt-4">
+              <div class="col-md-2 mt-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#slider" class="text-white mt-3">Pocetna</a>
+                </h6>
+              </div>
+              <div class="col-md-2 mt-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#onama" class="text-white mt-3">O nama</a>
+                </h6>
+              </div>
+              <div class="col-md-2 mt-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#newyear" class="text-white mt-3">Ponuda</a>
+                </h6>
+              </div>
+              <div class="col-md-2 mt-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#kontakt" class="text-white mt-3">Kontakt</a>
+                </h6>
+              </div>
+            </div>
+          </section>
+    
+          <hr class="my-4" />
+    
+          <section class="mb-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+               <img src="./img/logo1.png" alt="logo" width="100px">
+            </div>
+          </section>
+          <section class="text-center mb-5">
+            <a href="https://www.facebook.com" class="text-white me-4" target="_blank">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com" class="text-white me-4" target="_blank">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="./style/style.css" class="text-white me-4" target="_blank">
+              <i class="fa fa-css3" aria-hidden="true"></i>
+            </a>
+            <a href="sitemap.xml" class="text-white me-4" target="_blank">
+              Sitemap
+            </a>
+            <a href="dokumentacija.txt" class="text-white" target="_blank">
+              Dokumentacija
+            </a>
+            
+          </section>
+        </div>
+    
+        <div class="text-center p-3" id="copyright">
+             Copyright © Turisticka agencija Savin | Sva prava zadržana
+        </div>
+      </footer>
+      <script src="./javascript/main.js" async type="text/javascript"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

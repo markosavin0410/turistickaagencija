@@ -1,0 +1,19 @@
+@mixin link{
+    text-decoration: none;
+}
+@mixin d-flex($position){
+    display: flex;
+    justify-content:$position;
+    align-items: center;
+}
+@mixin after{
+    position: absolute;
+    display: block;
+}
+@mixin card($aspectratio){
+    background-color: white;
+    width: 100%;
+    aspect-ratio:$aspectratio;
+    border-radius:$recomendedCardBorderRadius;
+    border:1px solid rgba(0, 0, 0, 0.305);
+}

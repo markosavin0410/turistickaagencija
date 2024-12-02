@@ -1,0 +1,229 @@
+@import './variables';
+@import './mixins';
+.buttonContact{
+    background-color: $siteColor !important;
+    color: white;
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    &:hover{
+        background-color: rgba($siteColor,0.9) !important;
+    }
+}
+.about{
+    @include d-flex(center);
+    flex-direction: column;
+    h3{
+        font-weight: 800;
+        font-size: 3rem;
+    }
+    position: relative;
+    &::after{
+        position: absolute;
+        display: block;
+        width: 1px;
+        background-color:rgba(0, 0, 0, 0.31);
+        top: 20%;
+        height: 60%;
+        content: "";
+        right: 0px;
+    }
+    &:last-child::after{
+        display: none;
+    }
+}
+.bg-siteColor-white{
+    background: linear-gradient(to bottom,$siteColor 50%, white 50%) ;
+    
+}
+.bg-siteColor{
+    background-color: $siteColor;
+    color: white;
+}
+.title-white{
+    font-weight: 900;
+    font-size: $titleSize;
+}
+.hr-white{
+    width: 30px;
+    background-color: white;
+    border: none;
+    height: 3px;
+    margin: auto;
+    opacity: 1;
+}
+.hr-black{
+    @extend .hr-white;
+    background-color: black;
+}
+.bgSlika{
+    background-image:url('../img/kolmar.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    position:relative;
+    &::after{
+        @include after;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        content: "";
+        background-color: rgba($siteColor,0.6);
+        z-index: 0 !important;
+
+    }
+}
+#reservation{
+    background-color:white;
+    width: 100%;
+    padding:0px 10px;
+    margin: 0px auto;
+    max-width: 750px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 2 !important;
+    input[type="email"],select,input[type="date"]{
+        width: 100%;
+        border-radius:4px;
+        border:none;
+        height: 50px;
+        background-color: rgba($siteColor,0.24);
+    }
+    input[type="number"]{
+        width: 100px;
+        border-radius:4px;
+        border:none;
+        background-color: rgba($siteColor,0.24);
+        display: block;
+        height: 50px;
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: inner-spin-button !important;
+            width: 25px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius:4px;
+        border:none;
+            height: 100%;
+            color: $siteColor;
+          }
+    }
+    input[type="button"]
+    {
+        height: 40px;
+        width:100px;
+        border-radius:4px;
+        background-color: white;
+        border:2px solid rgba($siteColor,0.8);
+        margin: auto;
+        &:hover{
+            border:none;
+            background-color: $siteColor;
+            color:white;
+        }
+    }
+    
+#newyear{
+    z-index: 2;
+}
+}
+.eksCard{
+    @include card(1/1); //aspect-ratio value
+    .slikaEks{
+        height: 50%;
+        border-radius:$recomendedCardBorderRadius $recomendedCardBorderRadius 0 0;
+    }
+    .dugme{
+        @include d-flex(center);
+        .btn {
+            width: 40%;
+            max-width: 200px;
+            font-size: 0.85rem;
+            color: white;
+            
+        }
+        .btn1{
+            background-color: $siteColor;
+            margin-right: 5px;
+        }
+        .btn2{
+            background-color: #f4c757;
+        }
+    }
+}
+.cbHeight{
+    display: flex;
+    margin-top: 40px;
+   label{
+    margin-left: 5px;
+    font-size: 0.7rem;
+   }
+}
+#questions{
+    #listaPitanja{
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        ul{
+            list-style-type:none;
+            padding-left: 0px;
+            li{
+                border: 1px solid rgb(255, 255, 255);
+               
+                h5{
+                    background-color: $sitecolorlighter;
+                    color: white;
+                    line-height: 40px;
+                    padding-left: 20px;
+                    margin-bottom: 0px;
+                   &:hover{
+                    background-color: rgba($sitecolorlighter,0.9);
+                }
+                }
+                p{
+                    background-color: rgba($siteColor,0.24);
+                    margin-bottom: 0px;
+                    
+                
+                }
+            }
+        }
+    }
+}
+.greska{
+    color: red;
+    font-size: 0.8rem;
+    display: block;
+}
+.upsesnoPopunjenaForma{
+    color: green;
+    display: block;
+    margin-left: 10px;
+}
+#scrollUp{
+    width: 60px;
+    height: 60px;
+    @include d-flex(center);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 3;
+    background-color: rgba(white,0.8);
+    border: 2px solid rgba($siteColor,0.6);
+    i{
+        color: $siteColor;
+        font-size: 30px;
+    }
+}
+#mojaslika img{
+    border-radius: 20px 20px 0px 0px;
+    width: 300px;
+}
+#omeni{
+    background-color: rgba(white,0.64);
+    width: 300px;
+    padding: 10px;
+    border-radius: 0px 0px 20px 20px;
+}

@@ -1,0 +1,69 @@
+@import './variables';
+@import './mixins';
+.recomendedCard{
+    
+   &::after{
+    @include after;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        border-radius: $recomendedCardBorderRadius;
+        content:'';
+        background-color:rgba(white,0.84);
+        display: block;
+        z-index: 0;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.2s ease;
+   }
+    position: relative;
+   &:hover::after{
+    transform: scaleY(1);
+    
+   }
+    @include card(3/4); // aspect-ratio value
+    .slika{
+        height: 40%;
+        width: 100%;
+        position: relative;
+        border-radius:$recomendedCardBorderRadius $recomendedCardBorderRadius 0 0;
+        
+    }
+    section{
+        color: rgb(255, 200, 0);
+        font-size: 20px;
+    }
+    .abouthotel{
+        
+        .npp{
+            font-size: 12px;
+            color: gray;
+        }
+        .dugme{
+            width: 100%;
+            transform: translateX(0); /* početna pozicija */
+            transition: transform 0.2s ease;
+            position:relative;
+            z-index: 3;
+            @include d-flex(center);
+            input{
+                border: none;
+                border-radius: 3px;
+                width: 100px;
+                height: 40px;
+                color: white;
+                background-color:$sitecolorlighter;
+                transition: 0.2s;
+                           
+            }
+            
+        }
+       
+    }
+  
+}
+
+.price{
+            font-size: clamp(14px, 5vw, 24px);
+        }
