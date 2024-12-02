@@ -135,8 +135,8 @@ for (i in hoteli){
 var datumP=document.getElementById("datumPolaska");
 const danas = new Date();
 const godina = danas.getFullYear();
-const mesec = String(danas.getMonth() + 1);
-const dan = String(danas.getDate());
+const mesec = String(danas.getMonth() + 1).padStart(2, '0'); 
+const dan = String(danas.getDate()).padStart(2, '0'); 
 
 const podrazumevaniDatum = `${godina}-${mesec}-${dan}`;
 
