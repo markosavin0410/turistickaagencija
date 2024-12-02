@@ -1,3 +1,113 @@
+   //jquery
+    $(document).ready(() => {
+        $('#listaPitanja > ul> li > p').hide();
+        $('#listaPitanja >ul> li').click(function(e) {
+            e.stopPropagation();
+            $(this).find('p').slideToggle('fast');
+        });
+
+        $('.readmore').hide();
+        $('.btnRM').click(function (e){
+            e.stopPropagation();
+            var $readmore =  $(this).parent().prev('.readmore');
+            
+            if ($readmore.is(':visible')){
+                $(this).val('Saznaj vise')
+                $readmore.slideToggle('fast');
+            }else{
+                
+                $('.readmore').slideUp('fast');
+                $('.btnRM').val('Saznaj vise')
+                $(this).val('Prikazi manje')
+                $readmore.slideToggle('fast');
+                
+            }
+                
+            
+        
+        })
+        $('.rezBtns').hover( function() {
+            $(this).css('background-color', '#4663ac');
+        },
+        function() {
+            $(this).css('background-color', '');
+        },
+    )
+        $('.rezBtns').click(function () {
+            var rezervacija = $('#reservation').offset().top;
+            var visinaProzora = $(window).height();
+            var visinaRez = $('#reservation').outerHeight();
+            var scrollTo = rezervacija - (visinaProzora / 2) + (visinaRez / 2);
+            $('html, body').animate({
+                scrollTop: scrollTo
+              
+            }, 100);
+            var broj=this.id;
+            for (let i = 0; i < ddl.options.length; i++) {
+                if (ddl.options[i].value == broj) {
+                    ddl.selectedIndex=i;
+                }
+            }
+
+        
+          });
+          $('.btn1').click(function () {
+            var kontakt = $('#kontakt').offset().top;
+            var visinaProzora = $(window).height();
+            var visinaKon = $('#kontakt').outerHeight();
+            var scrollTo = kontakt - (visinaProzora / 2) + (visinaKon / 2);
+            $('html, body').animate({
+                scrollTop: scrollTo
+              
+            }, 100);
+           
+
+        
+          });
+          //hover heroButton
+          $('.buttonHero').hover(function(){
+            $('.buttonHero').css('background-position',' right center')
+            $('.buttonHero').css('color','white');
+          },function(){
+            $('.buttonHero').css('background-position','left center');
+            $('.buttonHero').css('color','black');
+          }
+        )
+
+        //javascript
+        var counter1 = 3190;
+        var counter2=0;
+        var interval = setInterval(function() {
+            counter1++;
+            $('#zadovoljniBroj').text(counter1+'+');
+
+            // Zaustavi brojač kada dostigne 3200
+            if (counter1 >= 3300) {
+                clearInterval(interval);
+            }
+        }, 10); 
+        var interval2 = setInterval(function() {
+            counter2++;
+            $('#putovanjaBroj').text(counter2+"+");
+
+            // Zaustavi brojač kada dostigne 160
+            if (counter2 >= 110) {
+                clearInterval(interval2);
+            }
+        }, 10); 
+        $('.recomendedCard').hover(
+            function() {
+                $(this).find('.dugme').css("transform", "translateY(-400%)"); 
+                $(this).find('.dugme').find('input').css({"width" : "150px" , "height" : "50px","font-size" : "1.3rem" }); 
+            }, 
+            function() {
+                $(this).find('.dugme').css("transform", "translateY(0px)");
+                $(this).find('.dugme').find('input').css({"width" : "100px" , "height" : "40px","font-size" : "1.0rem" });
+            }
+          );
+    });
+
+
 let nizHeroSlika=['barselona','milano','kolmar']; //pocetak slajdera
 let slika=document.getElementById("slider-img");
 let index = 0;
@@ -340,109 +450,4 @@ document.getElementById("contactBtn").addEventListener("click",()=>{
         if (!brgresaka) alert("uspešno ste postavili pitanje");
     });
    
-    //jquery
-    $(document).ready(() => {
-        $('#listaPitanja > ul> li > p').hide();
-        $('#listaPitanja >ul> li').click(function(e) {
-            e.stopPropagation();
-            $(this).find('p').slideToggle('fast');
-        });
-
-        $('.readmore').hide();
-        $('.btnRM').click(function (e){
-            e.stopPropagation();
-            var $readmore =  $(this).parent().prev('.readmore');
-            
-            if ($readmore.is(':visible')){
-                $(this).val('Saznaj vise')
-                $readmore.slideToggle('fast');
-            }else{
-                
-                $('.readmore').slideUp('fast');
-                $('.btnRM').val('Saznaj vise')
-                $(this).val('Prikazi manje')
-                $readmore.slideToggle('fast');
-                
-            }
-                
-            
-        
-        })
-        $('.rezBtns').hover( function() {
-            $(this).css('background-color', '#4663ac');
-        },
-        function() {
-            $(this).css('background-color', '');
-        },
-    )
-        $('.rezBtns').click(function () {
-            var rezervacija = $('#reservation').offset().top;
-            var visinaProzora = $(window).height();
-            var visinaRez = $('#reservation').outerHeight();
-            var scrollTo = rezervacija - (visinaProzora / 2) + (visinaRez / 2);
-            $('html, body').animate({
-                scrollTop: scrollTo
-              
-            }, 100);
-            var broj=this.id;
-            for (let i = 0; i < ddl.options.length; i++) {
-                if (ddl.options[i].value == broj) {
-                    ddl.selectedIndex=i;
-                }
-            }
-
-        
-          });
-          $('.btn1').click(function () {
-            var kontakt = $('#kontakt').offset().top;
-            var visinaProzora = $(window).height();
-            var visinaKon = $('#kontakt').outerHeight();
-            var scrollTo = kontakt - (visinaProzora / 2) + (visinaKon / 2);
-            $('html, body').animate({
-                scrollTop: scrollTo
-              
-            }, 100);
-           
-
-        
-          });
-          //hover heroButton
-          $('.buttonHero').hover(function(){
-            $('.buttonHero').css('background-position',' right center')
-            $('.buttonHero').css('color','white');
-          },function(){
-            $('.buttonHero').css('background-position','left center');
-            $('.buttonHero').css('color','black');
-          }
-        )
-        var counter1 = 3190;
-        var counter2=0;
-        var interval = setInterval(function() {
-            counter1++;
-            $('#zadovoljniBroj').text(counter1+'+');
-
-            // Zaustavi brojač kada dostigne 3200
-            if (counter1 >= 3300) {
-                clearInterval(interval);
-            }
-        }, 10); 
-        var interval2 = setInterval(function() {
-            counter2++;
-            $('#putovanjaBroj').text(counter2+"+");
-
-            // Zaustavi brojač kada dostigne 160
-            if (counter2 >= 110) {
-                clearInterval(interval2);
-            }
-        }, 10); 
-        $('.recomendedCard').hover(
-            function() {
-                $(this).find('.dugme').css("transform", "translateY(-400%)"); 
-                $(this).find('.dugme').find('input').css({"width" : "150px" , "height" : "50px","font-size" : "1.3rem" }); 
-            }, 
-            function() {
-                $(this).find('.dugme').css("transform", "translateY(0px)");
-                $(this).find('.dugme').find('input').css({"width" : "100px" , "height" : "40px","font-size" : "1.0rem" });
-            }
-          );
-    });
+ 
