@@ -447,7 +447,12 @@ document.getElementById("contactBtn").addEventListener("click",()=>{
         else{
             nijegreska(pitanje);
         }
-        if (!brgresaka) alert("uspešno ste postavili pitanje");
+       if (!brgresaka){
+            document.getElementById("contactBtn").parentElement.previousElementSibling.textContent = "Ocekujte odgovor na mejl.";
+        }
+        else{
+            document.getElementById("contactBtn").parentElement.previousElementSibling.textContent = "";
+        }
     });
    
  
